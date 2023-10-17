@@ -9,7 +9,7 @@ export class King extends Character {
     this.yearsOfReign = yearsOfReign;
   }
 
-  communicate() {
+  protected communicate(): string {
     return `${super.communicate()}Everybody will die`;
   }
 }
