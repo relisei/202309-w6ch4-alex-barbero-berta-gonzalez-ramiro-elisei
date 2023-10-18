@@ -11,11 +11,11 @@ export class Fighter extends Character {
     this.dexterity = this.filterDexterity(dexterity);
   }
 
-  communicate() {
+  protected communicate(): string {
     return `${super.communicate()}First I hit and then I ask`;
   }
 
-  filterDexterity(dexterity: number) {
+  protected filterDexterity(dexterity: number) {
     if (dexterity < 0) {
       return 0;
     }
