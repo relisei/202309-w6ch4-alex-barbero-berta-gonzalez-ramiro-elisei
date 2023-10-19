@@ -20,7 +20,7 @@ class CharacterCard extends Component {
             this.character.name
           } and ${
             this.character.family
-          }" class="character__picture card-img-top" />
+          }" class="character__picture card-img-top ${this.state ? "" : "character--invert"}" />
           <div class="card-body">
             <h2 class="character__name card-title h4">${
               this.character.name
@@ -31,8 +31,8 @@ class CharacterCard extends Component {
                 <li>
                   State: ${
                     this.state
-                      ? `<i class="fas fa-thumbs-down"></i>`
-                      : `<i class="fas fa-thumbs-up"></i>`
+                      ? `<i class="fas fa-thumbs-up"></i>` 
+                      : `<i class="fas fa-thumbs-down"></i>`
                   }
                 </li>
               </ul>
