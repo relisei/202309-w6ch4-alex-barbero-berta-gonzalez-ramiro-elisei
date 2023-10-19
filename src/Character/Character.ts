@@ -1,7 +1,7 @@
 import type { CharacterData } from "../types/types";
 
 abstract class Character {
-  isAlive = true;
+  public isAlive = true;
   series = "Game of Thrones";
   characterData;
 
