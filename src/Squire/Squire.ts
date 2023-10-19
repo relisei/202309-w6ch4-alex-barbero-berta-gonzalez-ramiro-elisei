@@ -12,7 +12,7 @@ export class Squire extends Character {
     serves: Fighter,
   ) {
     super(characterData);
-    this.kissAssLevel = this.#kissAssLevelFilter(kissAssLevel);
+    this.kissAssLevel = this.kissAssLevelFilter(kissAssLevel);
 
     if (serves instanceof Fighter) {
       this.serves = serves;
@@ -23,7 +23,7 @@ export class Squire extends Character {
     return `${super.communicate()}I'm a loser`;
   }
 
-  #kissAssLevelFilter(kissAssLevel: number) {
+  kissAssLevelFilter(kissAssLevel: number) {
     if (kissAssLevel < 0) {
       return 0;
     }
