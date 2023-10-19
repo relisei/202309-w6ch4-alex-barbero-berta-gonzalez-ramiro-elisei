@@ -1,4 +1,4 @@
-import type CharacterData from "../types/types";
+import type { CharacterData } from "../types/types";
 
 abstract class Character {
   isAlive = true;

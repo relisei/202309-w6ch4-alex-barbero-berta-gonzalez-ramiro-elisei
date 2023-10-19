@@ -1,6 +1,6 @@
 abstract class Component {
-  private readonly parentElement: Element;
-  private readonly element: Element;
+  protected readonly parentElement: Element;
+  protected readonly element: Element;
 
   constructor(parentElement: Element, tagName: string, className: string) {
     this.element = document.createElement(tagName);
@@ -10,6 +10,8 @@ abstract class Component {
 
   public render(): void {
     this.parentElement.appendChild(this.element);
+
+    this.populate();
   }
 
   abstract populate(): void;
