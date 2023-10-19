@@ -1,7 +1,7 @@
-import { Advisor } from "../Advisor/Advisor";
-import { Fighter } from "../Fighter/Fighter";
-import King from "../King/King";
-import { Squire } from "../Squire/Squire";
+import { Advisor } from "../Advisor/Advisor.js";
+import { Fighter } from "../Fighter/Fighter.js";
+import King from "../King/King.js";
+import { Squire } from "../Squire/Squire.js";
 
 const joffreyCharacterData = {
   name: "Joffrey",
