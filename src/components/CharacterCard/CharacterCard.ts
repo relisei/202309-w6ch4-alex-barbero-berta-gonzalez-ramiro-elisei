@@ -1,5 +1,6 @@
 import Component from "../Main-component/Main-component.js";
 import type { CharacterData } from "../../types/types.js";
+import { characters } from "../../data/characters.js";
 
 class CharacterCard extends Component {
   state;
@@ -48,7 +49,7 @@ class CharacterCard extends Component {
                 </ul>
                 <div class="character__actions">
                   <button class="character__action btn">speak</button>
-                  <button class="character__action btn">die</button>
+                  <button class="character__action die btn">die</button>
                 </div>
               </div>
           </div>
@@ -56,6 +57,13 @@ class CharacterCard extends Component {
         </div>
       </article>
       `;
+ 
+    const dieButton = document.querySelector(".die") as HTMLButtonElement | null;
+    dieButton?.addEventListener("click", (event) => {
+      event.preventDefault()
+      this.state = false
+      this.render()
+    })
   }
 }
 
