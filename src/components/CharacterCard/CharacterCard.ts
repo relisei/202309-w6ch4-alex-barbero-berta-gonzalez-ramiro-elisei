@@ -60,6 +60,7 @@ class CharacterCard extends Component {
  
     const dieButton = document.querySelector(".die") as HTMLButtonElement | null;
     dieButton?.addEventListener("click", (event) => {
+
       event.preventDefault()
       this.state = false
       this.render()
